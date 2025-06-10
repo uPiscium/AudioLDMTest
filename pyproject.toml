@@ -1,0 +1,12 @@
+[project]
+name = "audioldmtest"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "audioldm2",
+]
+
+[tool.uv.sources]
+audioldm2 = { git = "https://github.com/haoheliu/AudioLDM2.git" }
