@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 set -e
-if [[ ! -d "/home/upiscium/Documents/Programs/AudioLDMTest" ]]; then
+if [[ ! -d "/home/upiscium/Programs/AudioLDMTest" ]]; then
   echo "Cannot find source directory; Did you move it?"
-  echo "(Looking for "/home/upiscium/Documents/Programs/AudioLDMTest")"
+  echo "(Looking for "/home/upiscium/Programs/AudioLDMTest")"
   echo 'Cannot force reload with this script - use "direnv reload" manually and then try again'
   exit 1
 fi
 
 # rebuild the cache forcefully
-_nix_direnv_force_reload=1 direnv exec "/home/upiscium/Documents/Programs/AudioLDMTest" true
+_nix_direnv_force_reload=1 direnv exec "/home/upiscium/Programs/AudioLDMTest" true
 
 # Update the mtime for .envrc.
 # This will cause direnv to reload again - but without re-building.
-touch "/home/upiscium/Documents/Programs/AudioLDMTest/.envrc"
+touch "/home/upiscium/Programs/AudioLDMTest/.envrc"
 
 # Also update the timestamp of whatever profile_rc we have.
 # This makes sure that we know we are up to date.
-touch -r "/home/upiscium/Documents/Programs/AudioLDMTest/.envrc" "/home/upiscium/Documents/Programs/AudioLDMTest/.direnv"/*.rc
+touch -r "/home/upiscium/Programs/AudioLDMTest/.envrc" "/home/upiscium/Programs/AudioLDMTest/.direnv"/*.rc
