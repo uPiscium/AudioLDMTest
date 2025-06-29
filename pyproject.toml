@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.7"
 dependencies = [
     "audioldm2",
+    "fastapi[all]>=0.103.2",
 ]
 
 [tool.uv.sources]
