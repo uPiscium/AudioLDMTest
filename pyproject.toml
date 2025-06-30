@@ -3,11 +3,15 @@ name = "audioldmtest"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.11, <3.12"
 dependencies = [
-    "audioldm2",
+    "torch>=2.0.0",
     "fastapi[all]>=0.103.2",
+    "scipy<=1.15.3",
+    "transformers[torch]==4.42.0",
+    "diffusers[torch]>=0.34.0",
+    "audioldm2",
 ]
 
 [tool.uv.sources]
-audioldm2 = { git = "https://github.com/haoheliu/AudioLDM2.git" }
+audioldm2 = { git = "https://github.com/upiscium/AudioLDM2.git" }
